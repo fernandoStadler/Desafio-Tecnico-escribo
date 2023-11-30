@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Nova+Square&display=swap');
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f4f4f2;
+    height: 100vh;
+}
+
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
