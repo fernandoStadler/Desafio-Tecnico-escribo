@@ -15,7 +15,6 @@ const setSum = (number) => {
 
 btnResult.addEventListener("click", ()=>{
   
-
     let number = parseInt(inputNumber.value)
     if (Number.isInteger(number) && number > 0) {
         showResult.innerHTML=`
@@ -34,7 +33,6 @@ btnResult.addEventListener("click", ()=>{
     btnClear.classList.remove('hidden')
     btnClear.classList.add('show')
 })
-
 btnClear.addEventListener('click',()=>{
     inputNumber.value = '',
 
