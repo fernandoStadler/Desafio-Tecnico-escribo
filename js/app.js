@@ -13,18 +13,20 @@ const setSum = (number) => {
     return sum;
 }
 
-btnResult.addEventListener("click", ()=>{
-  
+btnResult.addEventListener("click", () => {
+
     let number = parseInt(inputNumber.value)
     if (Number.isInteger(number) && number > 0) {
-        showResult.innerHTML=`
+        showResult.innerHTML = `
         <div class="result">
                     <spam>${setSum(number)}</spam>
         </div>`
     }
-    else{
-        showResult.innerHTML=`
-        <spam class="error-text">Por favor, o número escolhido deve ser um número inteiro e positivo!</spam>
+    else {
+        showResult.innerHTML = `
+        <div class="error-text">
+             <span>Por favor, o número escolhido deve ser um número inteiro e positivo!</span>
+        </div>
         `
     }
     btnResult.classList.remove('show')
@@ -33,16 +35,18 @@ btnResult.addEventListener("click", ()=>{
     btnClear.classList.remove('hidden')
     btnClear.classList.add('show')
 })
-btnClear.addEventListener('click',()=>{
+btnClear.addEventListener('click', () => {
     inputNumber.value = '',
 
-    btnClear.classList.remove('show')
+        btnClear.classList.remove('show')
     btnClear.classList.add('hidden')
 
     btnResult.classList.remove('hidden')
     btnResult.classList.add('show')
 
-    showResult.innerHTML=`
-    <spam class="error-text"></spam>
-    `
+    showResult.innerHTML = `
+        <div>
+             <span></span>
+        </div>
+        `
 })
